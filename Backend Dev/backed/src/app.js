@@ -2,7 +2,15 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 
+// routes
+
+import userRouter from "./routes/user.routes.js";
+
+// routes delcration
+
 const app = express();
+
+app.use("/api/v1/users", userRouter);
 
 app.use(
     cors({
