@@ -1,16 +1,17 @@
-import express from "express";
-import cors from "cors";
-import cookieParser from "cookie-parser";
+import express from "express"
+import cors from "cors"
+import cookieParser from "cookie-parser"
+// import * as bodyParser from "body-parser";
 
 // routes
 
-import userRouter from "./routes/user.routes.js";
 
 // routes delcration
 
 const app = express();
 
-app.use("/api/v1/users", userRouter);
+
+// app.use(bodyParser.json())
 
 app.use(
     cors({
@@ -35,5 +36,9 @@ app.use(
 app.use(express.static("public"));
 
 app.use(cookieParser());
+
+
+import userRouter from "./routes/user.routes.js";
+app.use("/api/v1/users", userRouter);
 
 export { app };
