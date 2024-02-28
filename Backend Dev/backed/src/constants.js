@@ -1,1 +1,1 @@
-export const DB_NAME = "backed-chai"
+export const DB_NAME="backend-chai"

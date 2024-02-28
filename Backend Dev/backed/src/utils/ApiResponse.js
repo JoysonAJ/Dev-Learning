@@ -4,7 +4,7 @@ class ApiResponse {
     ){
         this.data=data,
         this.message=message,
-        this.statusCode=statusCode,
+        this.statusCode=statusCode
     }
 }
 
